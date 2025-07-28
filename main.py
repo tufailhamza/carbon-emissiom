@@ -161,15 +161,19 @@ st.markdown("""
     
     /* Enhanced Card Styles */
     .metric-card {
-        background: #ffffff;
-        border-radius: 10px;
-        padding: 24px;
-        text-align: center;
-        margin: 12px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-        border: none;
-        position: relative;
+       background: #ffffff;
+    border-radius: 10px;
+    padding: 32px 24px;
+    text-align: center;
+    margin: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     }
     
     .metric-card:hover {
@@ -692,6 +696,15 @@ def display_metric_card(title, value, unit="", col_width=1):
     </div>
     """
 
+def display_metric_card_net(title, value, unit="", col_width=1):
+    """Display a metric card"""
+    return f"""
+    <div class="metric-card">
+        <div class="metric-title">{title}</div>
+        <div class="metric-value">{value:,.0f}</div>
+        <div class="metric-unit">{unit}</div>
+    </div>
+    """
 def display_metric_card_national(title, value, unit="", property_type="", absolute_delta=0, percent_delta=0, col_width=1):
     """Display a metric card with tooltip and delta values"""
     tooltip_text = f"National median Site EUI for {property_type} buildings – Portfolio Manager (CBECS 2018)."
@@ -1021,7 +1034,7 @@ def main():
                     emissions_value = prediction[emissions_key]
                 else:
                     emissions_value = 0
-                st.markdown(display_metric_card("Net Emissions", emissions_value, "Metric Tons CO₂"), unsafe_allow_html=True)
+                st.markdown(display_metric_card_net("Net Emissions", emissions_value, "Metric Tons CO₂"), unsafe_allow_html=True)
             
             with col4:
                 # National Median - use median data from JSON

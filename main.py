@@ -194,23 +194,23 @@ st.markdown("""
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
     
-    .metric-title {
-        font-size: 16px;
-        font-weight: 500;
-        color: #64748b;
-        margin-bottom: 16px;
-        text-align: center;
-        letter-spacing: -0.01em;
-        line-height: 1.4;
-    }
-    
-    .metric-value {
-        font-size: 24px;
-        font-weight: 700;
-        margin: 12px 0;
-        color: #1f2937;
-        letter-spacing: -0.02em;
-    }
+  .metric-title {
+    font-size: 28px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 16px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+}
+
+.metric-value {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 12px 0;
+    color: #1f2937;
+    letter-spacing: -0.02em;
+}
     
     .metric-unit {
         font-size: 14px;
@@ -276,47 +276,46 @@ st.markdown("""
     
     /* Delta Overlay Enhancements */
     .delta-overlay {
-        position: absolute;
-        top: 50%;
-        right: -2px;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        z-index: 10;
-        background: rgba(255, 255, 255, 0.95);
-        padding: 12px;
-        border-radius: 8px;
-        border: 1px solid #e5e7eb;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        backdrop-filter: blur(4px);
-    }
-    
-    .delta-item {
-        display: flex;
-        align-items: baseline;
-        gap: 4px;
-        font-size: 11px;
-        white-space: nowrap;
-    }
-    
-    .delta-label {
-        font-size: 11px;
-        font-weight: 600;
-        color: #64748b;
-    }
-    
-    .delta-value {
-        font-size: 12px;
-        font-weight: 700;
-    }
-    
-    .delta-unit {
-        font-size: 10px;
-        color: #64748b;
-        font-weight: 400;
-    }
-    
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: #f8fafc;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delta-item {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.delta-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.delta-value {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.delta-unit {
+    font-size: 10px;
+    color: #64748b;
+    font-weight: 400;
+}
+        
     /* Enhanced Expander Styles */
     .streamlit-expanderHeader {
         background: #f8f9fa !important;

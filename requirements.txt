@@ -8,4 +8,5 @@ geopy
 rapidfuzz
 geopy
 rapidfuzz
-scikit-learn
+scikit-learn==1.3.2
+
